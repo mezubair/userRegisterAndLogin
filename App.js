@@ -1,3 +1,4 @@
+import { userSchema } from './databaseschema/User';
 const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
@@ -12,12 +13,6 @@ app.use(express.urlencoded({ extended: true }));
 mongoose.connect('mongodb://localhost:27017/yourDatabaseName', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
-});
-
-const userSchema = new mongoose.Schema({
-  name: String,
-  email: String,
-  password: String,
 });
 
 const User = mongoose.model('User', userSchema);
