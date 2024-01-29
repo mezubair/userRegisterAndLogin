@@ -16,7 +16,7 @@ const handleRegister = async (req, res) => {
     return res.status(500).send('Error saving user');
   }
 
-  res.send('Data submitted to MongoDB using Mongoose');
+  res.send('User Registered');
 };
 
 module.exports = handleRegister;
